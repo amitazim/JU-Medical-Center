@@ -94,30 +94,6 @@
   <!-- booking section ends -->
 
 
-
-
-  <!-- footer section starts  -->
-
-
-
-  <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

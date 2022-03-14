@@ -147,31 +147,34 @@
             <li>
                 <a href="/php/home.php"><i class="fas fa-home"></i> Home</a>
             </li>
+
             <li>
                 <a href="/php/Doctor/doctor.php"><i class="fas fa-user-md"></i> Doctors</a>
             </li>
+
             <li>
                 <a href="/php/staff/staff.php"><i class="fas fa-user-nurse"></i> Staffs</a>
             </li>
+
             <li>
                 <a href="/php/patient/patient.php"><i class="fas fa-user-injured"></i> Patients</a>
             </li>
+
             <li>
                 <a href="/php/test/test.php"><i class="fas fa-file-medical-alt"></i> Tests</a>
-
             </li>
+
             <li>
                 <a href="/php/bed/bed.php"><i class="fas fa-procedures"></i> Bed</a>
-
             </li>
+
             <li>
                 <a href="/php/Ambulence/ambulence.php"><i class="fas fa-ambulance"></i> Ambulance</a>
-
             </li>
+
             <li>
                 <a href="/php/medicine/medicine.php"><i class="fas fa-medkit"></i> Medicine</a>
             </li>
-
         </ul>
 
         <!-- logoutbutton -->
@@ -245,12 +248,8 @@
                             <td><b><?php echo $Patient_data['Amb_ID']; ?></b></td>
                             <td><?php echo $Patient_data['Amb_Status'];  ?></td>
                             <td style="width: 140px;">
-
                                 <button> <a href="/php/Ambulence/update.php?ID=<?php echo $Patient_data['Amb_ID'];  ?>" class="btn btn-success"><b>Update</b></a></button>
                                 <button><a href="/php/Ambulence/Delete.php?Amb_ID=<?php echo $Patient_data['Amb_ID']; ?>" class="btn btn-danger"><b>Delete</b></a></button>
-
-
-
                             </td>
                         </tr>
                     <?php
