@@ -2,10 +2,10 @@
 include_once 'db_conn.php';
 if (count($_POST) > 0) {
 
-  mysqli_query($conn, "UPDATE Ambulence set Amb_ID='" . $_POST['Amb_ID'] . "', Amb_Status='" . $_POST['Amb_Status'] . "' WHERE Amb_ID='" . $_POST['Amb_ID'] . "'");
+  mysqli_query($conn, "UPDATE medicine set M_Code='" . $_POST['M_Code'] . "', M_Name='" . $_POST['M_Name'] . "' ,Quantity='" . $_POST['Quantity'] . "' WHERE M_Code='" . $_POST['M_Code'] . "'");
   $message = "Record Modified Successfully";
 }
-$query = mysqli_query($conn, "SELECT * FROM Ambulence WHERE Amb_ID='" . $_GET['Amb_ID'] . "'");
+$query = mysqli_query($conn, "SELECT * FROM medicine WHERE M_Code='" . $_GET['M_Code'] . "'");
 $Patient_data = mysqli_fetch_array($query);
 
 ?>
@@ -40,20 +40,25 @@ $Patient_data = mysqli_fetch_array($query);
       </div>
 
       <div>
-        <h2>Ambulence ID</h2>
-        <input type="number" name="Amb_ID" value="<?php echo $Patient_data['Amb_ID']; ?>">
+        <h2>Medicine Code</h2>
+        <input type="hidden" name="M_Code" class="form-control" value="<?php echo $Patient_data['M_Code']; ?>">
+        <input type="number" name="M_Code" value="<?php echo $Patient_data['M_Code']; ?>">
         <br>
       </div>
 
       <div>
-        <h2>Amb_Status</h2>
-        <input list="browsers" name="Amb_Status" id="browser" class="" required>
-        <datalist id="browsers">
-          <option value="<?php echo $Patient_data['Amb_Status']; ?>">
-          <option value="<?php echo $Patient_data['Amb_Status']; ?>">
-        </datalist>
+        <h2>Medicine Name</h2>
+        <input name="M_Name" type="text" class="form-control" value="<?php echo $Patient_data['M_Name']; ?>" required>
       </div>
+
+      <div>
+        <h2>Quantity</h2>
+        <input type="number" name="Quantity" value="<?php echo $Patient_data['Quantity']; ?>">
+        <br>
+      </div>
+    
       <br>
+
       <input type="submit" value="Update" class="btn">
 
     </form>

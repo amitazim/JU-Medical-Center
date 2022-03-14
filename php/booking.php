@@ -11,18 +11,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/book.css">
 
 </head>
 
 <body>
 
     <!-- header section starts  -->
- 
+
     <header class="header">
+
         <img src="/image/logo-ju-small.png" alt style="height: 70px; width: 65px;">
         <a href="" class="logo">JU Medical Center</a>
-
 
         <nav class="navbar">
             <a href="/html/index.html">home</a>
@@ -41,32 +42,52 @@
 
     <!-- header section ends -->
 
-    <!-- home section starts  -->
-
-    <h1 class="heading"> JU <span>Medical</span> center</h1>
-
-    <section class="home" id="home">
 
 
-        <div class="image">
-            <img src="/image/home.jpg" alt="">
-        </div>
+    <!-- booking section starts   -->
 
-        <div class="content">
-            <h3>stay safe, stay healthy</h3>
-            <p>Jahangirnagar University Has Its Own Medical Centre For The Students, The Teachers And The Staffs. The
-                Centre Provides Twenty-Four Hour Service. It Is Supervised By The Chief Medical Officer With A Staff Of
-                Qualified Doctors. The Centre Bears All Expenses Related To Treatment In Case Of Students. But It
-                Provides Only Health-Related Advice In Case Of The Teachers And The Staff.</p>
-            <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
+    <section class="book" id="book">
+
+        <h1 class="heading"> <span>book</span> now </h1>
+
+        <div class="row">
+            <form action="/php/book.php" method="post">
+                <h3>book appointment</h3>
+
+                <h2>Patient ID</h2>
+                <input type="number" placeholder="number" name="P_ID" class="box" required>
+
+
+                <h2>Patient Name</h2>
+                <input type="text" placeholder="patient name" name="P_Name" class="box" required>
+
+                <h2>Gender</h2>
+                <label for="male" class="box"><input type="radio" name="Gender" value="Male" id="male" /> Male</label>
+                <label for="female" class="box"><input type="radio" name="Gender" value="Female" id="female" /> Female</label>
+                <label for="others" class="box"><input type="radio" name="Gender" value="Others" id="others" /> Others</label>
+
+                <h2>Patient Age</h2>
+                <input type="number" placeholder="number" name="Age" class="box" required>
+
+                <h2>Patient Type</h2>
+                <input list="browsers" name="P_Type" id="browser" class="box" required>
+                <datalist id="browsers">
+                    <option value="Student">
+                    <option value="Teacher">
+                    <option value="Staff">
+                </datalist>
+
+                <h2>Admit Date</h2>
+                <input type="date" id="day" class="box" name="A_Date" required>
+
+                <input type="submit" value="book now" class="btn">
+            </form>
+
         </div>
 
     </section>
 
-    <!-- home section ends -->
-
-
-
+    <!-- booking section ends -->
 
 
 
@@ -105,7 +126,7 @@
 
             <div class="box">
                 <h3>follow us</h3>
-                <a target="_blank"  href="https://www.facebook.com/Medical-Centre-Jahangirnagar-University-111006755903584/?ref=page_internal"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="https://www.facebook.com/Medical-Centre-Jahangirnagar-University-111006755903584/?ref=page_internal"> <i class="fab fa-facebook-f"></i> facebook </a>
                 <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
                 <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
                 <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
@@ -114,7 +135,7 @@
 
         </div>
 
-        <div class="credit"> created by <span>Group 5</span> | all rights reserved </div>
+        <div class="credit"> created by <span>Group 16</span> | all rights reserved </div>
 
     </section>
 
@@ -138,7 +159,7 @@
 
 
     <!-- custom js file link  -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

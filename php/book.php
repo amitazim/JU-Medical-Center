@@ -1,3 +1,29 @@
+<?php
+session_start(); 
+include "db_conn.php";
+
+
+if (isset($_POST['P_ID']) && isset($_POST['P_Name']) && isset($_POST['Gender']) && isset($_POST['Age']) && isset($_POST['P_Type']) && isset($_POST['A_Date'])) {
+
+ 
+    $P_ID = $_POST['P_ID'];
+    $P_Name = $_POST['P_Name'];
+    $Gender = $_POST['Gender'];
+    $Age = $_POST['Age'];
+    $P_Type = $_POST['P_Type'];
+    $A_Date = $_POST['A_Date'];
+
+
+   $sql = "insert into patient(P_ID,P_Name,Gender,Age,P_Type,A_Date) values('$P_ID','$P_Name','$Gender','$Age','$P_Type','$A_Date')";
+   if(mysqli_query($conn,$sql)){
+       echo 'Registration successfully...';
+   }else{
+    echo 'Error';
+   }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,18 +37,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/book.css">
 
 </head>
 
 <body>
 
     <!-- header section starts  -->
- 
+
     <header class="header">
+
         <img src="/image/logo-ju-small.png" alt style="height: 70px; width: 65px;">
         <a href="" class="logo">JU Medical Center</a>
-
 
         <nav class="navbar">
             <a href="/html/index.html">home</a>
@@ -41,34 +68,10 @@
 
     <!-- header section ends -->
 
-    <!-- home section starts  -->
 
-    <h1 class="heading"> JU <span>Medical</span> center</h1>
-
-    <section class="home" id="home">
-
-
-        <div class="image">
-            <img src="/image/home.jpg" alt="">
-        </div>
-
-        <div class="content">
-            <h3>stay safe, stay healthy</h3>
-            <p>Jahangirnagar University Has Its Own Medical Centre For The Students, The Teachers And The Staffs. The
-                Centre Provides Twenty-Four Hour Service. It Is Supervised By The Chief Medical Officer With A Staff Of
-                Qualified Doctors. The Centre Bears All Expenses Related To Treatment In Case Of Students. But It
-                Provides Only Health-Related Advice In Case Of The Teachers And The Staff.</p>
-            <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-    </section>
-
-    <!-- home section ends -->
-
-
-
-
-
+<div style="margin-left: 40%; margin-top: 10%;">
+    <h1>Registration successfully.</h1>
+</div>
 
 
     <!-- footer section starts  -->
@@ -105,7 +108,7 @@
 
             <div class="box">
                 <h3>follow us</h3>
-                <a target="_blank"  href="https://www.facebook.com/Medical-Centre-Jahangirnagar-University-111006755903584/?ref=page_internal"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="https://www.facebook.com/Medical-Centre-Jahangirnagar-University-111006755903584/?ref=page_internal"> <i class="fab fa-facebook-f"></i> facebook </a>
                 <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
                 <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
                 <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
@@ -114,32 +117,8 @@
 
         </div>
 
-        <div class="credit"> created by <span>Group 5</span> | all rights reserved </div>
+        <div class="credit"> created by <span>Group 16</span> | all rights reserved </div>
 
     </section>
 
     <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- custom js file link  -->
-    <script src="script.js"></script>
-
-</body>
-
-</html>
