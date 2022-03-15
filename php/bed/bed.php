@@ -246,12 +246,8 @@
                             <td><?php echo $Patient_data['Date'];  ?></td>
                             <td><?php echo $Patient_data['Bed_Status'];  ?></td>
                             <td style="width: 140px;">
-
                                 <button> <a href="/php/bed/update.php?Bed_Num=<?php echo $Patient_data['Bed_Num'];  ?>" class="btn btn-success"><b>Update</b></a></button>
                                 <button><a href="/php/bed/Delete.php?Bed_Num=<?php echo $Patient_data['Bed_Num']; ?>" class="btn btn-danger"><b>Delete</b></a></button>
-
-
-
                             </td>
                         </tr>
                     <?php

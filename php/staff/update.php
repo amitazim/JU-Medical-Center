@@ -35,7 +35,7 @@ $Patient_data = mysqli_fetch_array($query);
     <!-- Area Chart -->
 
 
-    <form action="" method="post" align="center">
+    <form action="" method="post" textalign="center">
       <div><?php if (isset($message)) {
               echo $message;
             } ?>

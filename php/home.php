@@ -151,12 +151,6 @@
 </head>
 
 <body>
-
-
-
-
-
-
      <!-- slidebar -->
 
      <div class="slidebar">

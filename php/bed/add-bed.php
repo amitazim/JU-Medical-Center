@@ -52,14 +52,6 @@
 
 <body>
 
-  <!-- header section starts  -->
-
-
-
-  <!-- header section ends -->
-
-
-
   <!-- booking section starts   -->
 
   <section class="book" id="book">
