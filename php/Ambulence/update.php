@@ -4,6 +4,7 @@ if (count($_POST) > 0) {
 
   mysqli_query($conn, "UPDATE Ambulence set Amb_ID='" . $_POST['Amb_ID'] . "', Amb_Status='" . $_POST['Amb_Status'] . "' WHERE Amb_ID='" . $_POST['Amb_ID'] . "'");
   $message = "Record Modified Successfully";
+  header("location:ambulence.php");
 }
 $query = mysqli_query($conn, "SELECT * FROM Ambulence WHERE Amb_ID='" . $_GET['Amb_ID'] . "'");
 $Patient_data = mysqli_fetch_array($query);
