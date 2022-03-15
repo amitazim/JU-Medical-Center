@@ -3,7 +3,7 @@ $Gender = isset($_POST['Gender']) ? $_POST['Gender'] : '';
 include_once 'db_conn.php';
 if (count($_POST) > 0) {
 
-  mysqli_query($conn, "UPDATE staff set S_ID='" . $_POST['S_ID'] . "', S_Name='" . $_POST['S_Name'] . "' ,Gender='" . $_POST['Gender'] . "' ,Work_Day='" . $_POST['Work_Day'] ."' WHERE S_ID='" . $_POST['S_ID'] . "'");
+  mysqli_query($conn, "UPDATE staff set S_ID='" . $_POST['S_ID'] . "', S_Name='" . $_POST['S_Name'] . "' ,Work_Day='" . $_POST['Work_Day'] ."' WHERE S_ID='" . $_POST['S_ID'] . "'");
   $message = "Record Modified Successfully";
 }
 $query = mysqli_query($conn, "SELECT * FROM staff WHERE S_ID='" . $_GET['S_ID'] . "'");
@@ -34,7 +34,7 @@ $Patient_data = mysqli_fetch_array($query);
     <!-- Area Chart -->
 
 
-    <form action="" method="post">
+    <form action="" method="post" align="center">
       <div><?php if (isset($message)) {
               echo $message;
             } ?>
@@ -67,8 +67,9 @@ $Patient_data = mysqli_fetch_array($query);
 
       <input type="submit" value="Update" class="btn">
 
+      
     </form>
-
+    
   </div>
   </div>
 
